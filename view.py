@@ -228,7 +228,7 @@ def gerar_relatorio_pdf(nome_arquivo="relatorio_biblioteca.pdf"):
         print("\nLivros Cadastrados:")
         for livro in livros:
             pdf.multi_cell(0, 10, f"ID: {livro[0]} \nTítulo: {livro[1]} \nAutor: {livro[2]} \nEditora: {livro[3]} \nAno: {livro[4]} \nISBN: {livro[5]} \nTotal: {livro[6]} \nDisponível: {livro[7]} \n_________________")
-            print(f"ID: {livro[0]} | Título: {livro[1]}")
+            print(f"ID: {livro[0]} | Título: {livro[1]} | Total: {livro[6]} | Disponível: {livro[7]}" )
     else:
         pdf.cell(0, 10, "Nenhum livro cadastrado.", ln=True)
         print("Nenhum livro cadastrado.")
@@ -298,6 +298,7 @@ def consultar_livros(titulo):
             print("Nenhum livro encontrado com os critérios informados.")
         else:
             print("Livros encontrados:\n")
+            print(f"Pesquisa: {titulo}\n")
             for livro in resultados:
                 print(f"ID: {livro[0]}")
                 print(f"Título: {livro[1]}")
