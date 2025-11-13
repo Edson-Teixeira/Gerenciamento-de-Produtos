@@ -4,7 +4,7 @@ import os
 
 os.system("cls" if os.name == "nt" else "clear")
 
-# Ao selecionar a sua opção, precione "Enter" par voltar ao Menu inicial.
+# Ao selecionar a sua opção, precione "Enter" para voltar ao Menu inicial.
 
 def menu():
     print("Selecione uma opção: ")
@@ -34,6 +34,7 @@ while gatilho == True: # loop principal do app
 
     if escolha == 1: # Inserimos os dados do novo livro
         os.system("cls" if os.name == "nt" else "clear")
+        print("Insira as informção do LIvro")
         titulo = str(input("Digite o Titulo do Livro: "))
         autor = str(input("Digite o Autor do Livro: "))
         editora =str(input("Digite a Editora do Livro: "))
@@ -45,6 +46,7 @@ while gatilho == True: # loop principal do app
     
     if escolha == 2: # Inserimos os dados do novo usuario
         os.system("cls" if os.name == "nt" else "clear")
+        print("Insira as informações do novo Usuario")
         nome = str(input("Digite o Nome do Novo Usuario: "))
         sobrenome = str(input("Digite o Sobrenome do Nome Usuario: "))
         endereco =str(input("Digite o Endereço do Novo Usuario: "))
@@ -57,6 +59,7 @@ while gatilho == True: # loop principal do app
 
     if escolha == 3: # Inserimos os dados do novo emprestimo
         os.system("cls" if os.name == "nt" else "clear")
+        print("Insira as informaçoes do emprestimo")
         id_livro = str(input("Digite o ID do Livro: "))
         id_usuario = str(input("Digite o ID do Usuario: "))
         data_emprestimo =str(input("Digite a Data do Emprestimo: "))
